@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field name="search" type="text" label="JSEARCH_FILTER" description="" hint="JSEARCH_FILTER" />
+		<field name="published" type="status" label="JOPTION_SELECT_PUBLISHED" description="JOPTION_SELECT_PUBLISHED_DESC" onchange="this.form.submit();">
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+        </field>
+    </fields>
+    <fields name="list">
+        <field name="fullordering" type="list" label="COM_CONTACT_LIST_FULL_ORDERING" description="COM_CONTACT_LIST_FULL_ORDERING_DESC" default="a.name ASC" onchange="this.form.submit();">
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="a.id ASC">JGRID_HEADING_ID_ASC</option>
+			<option value="a.id DESC">JGRID_HEADING_ID_DESC</option>
+            <option value="a.ordering ASC">JGRID_HEADING_ORDERING_ASC</option>
+            <option value="a.ordering DESC">JGRID_HEADING_ORDERING_DESC</option>
+            <option value="a.published ASC">JSTATUS_ASC</option>
+            <option value="a.published DESC">JSTATUS_DESC</option>
+            <option value="a.title ASC">COM_AVISAMUSICDB_FILTER_CELEBRITY_NAME_ASC</option>
+            <option value="a.title DESC">COM_AVISAMUSICDB_FILTER_CELEBRITY_NAME_DESC</option>
+            <option value="a.celebrity_type ASC">COM_AVISAMUSICDB_FILTER_CELEBRITY_TYPE_ASC</option>
+            <option value="a.celebrity_type DESC">COM_AVISAMUSICDB_FILTER_CELEBRITY_TYPE_DESC</option>
+            <option value="a.designation ASC">COM_AVISAMUSICDB_FILTER_DESIGNATION_ASC</option>
+            <option value="a.designation DESC">COM_AVISAMUSICDB_FILTER_DESIGNATION_DESC</option>
+             <option value="a.residence ASC">COM_AVISAMUSICDB_FILTER_RESIDENCE_ASC</option>
+            <option value="a.residence DESC">COM_AVISAMUSICDB_FILTER_RESIDENCE_DESC</option>
+            <option value="a.profile_image ASC">COM_AVISAMUSICDB_FILTER_PROFILE_IMAGE_ASC</option>
+            <option value="a.profile_image DESC">COM_AVISAMUSICDB_FILTER_PROFILE_IMAGE_DESC</option>
+        </field>
+        <field name="limit" type="limitbox" label="COM_CONTACT_LIST_LIMIT" description="COM_CONTACT_LIST_LIMIT_DESC" default="25" class="input-mini" onchange="this.form.submit();" />
+    </fields>
+</form>
+	

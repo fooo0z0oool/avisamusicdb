@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form validate="true"  serverside_validate="true" tabbed="1" >
+	<fieldset name="basic_configuration" label="COM_AVISAMUSICDB_FIELDSET_BASIC_INFO" class="tab-pane active avisamusicw-view-form-class" addfieldpath="/administrator/components/com_avisamusicdb/fields">
+        
+        <field name="id" type="hidden"/>
+        
+		<field name="title" type="text"
+			class="inputbox"
+			label="COM_AVISAMUSICDB_FIELD_MUSIC_TITLE"
+			required="true"
+		/>
+
+		<field name="alias" type="text"
+			class="inputbox"
+			label="COM_AVISAMUSICDB_FIELD_ALIAS"
+			description="COM_AVISAMUSICDB_FIELD_ALIAS_DESC"
+		/>
+
+		<field name="release_date" 
+			type="calendar" 
+			label="COM_AVISAMUSICDB_FIELD_RELEASE_DATE" 
+		/>
+
+		<field name="featured"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="COM_AVISAMUSICDB_FIELD_FEATURED"
+			description="COM_AVISAMUSICDB_FIELD_FEATURED_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="music_story" 
+			type="editor"
+			class="inputbox"
+			label="COM_AVISAMUSICDB_FIELD_MUSIC_STORY"
+			required="true"
+			filter="JComponentHelper::filterText"
+		 />
+
+		<field name="profile_image"
+		 	type="media"
+		 	thumbsize="400x650"
+			label="COM_AVISAMUSICDB_FIELD_PROFILE_IMAGE"
+			description="COM_AVISAMUSICDB_FIELD_PROFILE_IMAGE_DESC"
+			required="true"
+		/>
+
+		<field name="cover_image"
+		 	type="media"
+			label="COM_AVISAMUSICDB_FIELD_COVER_IMAGE"
+			description="COM_AVISAMUSICDB_FIELD_COVER_IMAGE_DESC"
+			thumbsize="2000x597"
+			required="true"
+		/>
+
+		<field
+        	name="directors"
+		 	type="avisacelebrities"
+			class="directors-select"
+        	multiple="multiple"
+        	label="COM_AVISAMUSICDB_FIELD_DIRECTOR"
+        	description="COM_AVISAMUSICDB_FIELD_DIRECTOR_DESC"
+        />
+
+		<field
+        	name="actors"
+		 	type="sql"
+        	translate="false" 
+        	query="SELECT id, title FROM #__avisamusicdb_celebrities WHERE published = 1" 
+        	key_field="id" 
+        	value_field="title"
+        	
+        	multiple="multiple"
+        	label="COM_AVISAMUSICDB_FIELD_ACTORS"
+        	description="COM_AVISAMUSICDB_FIELD_ACTORS_DESC"
+        />	
+		
+        <field
+        	name="albums"
+		 	type="sql"
+        	translate="false" 
+        	query="SELECT id, title FROM #__avisamusicdb_albums WHERE published = 1" 
+        	key_field="id" 
+        	value_field="title"
+        	multiple="multiple"
+        	label="COM_AVISAMUSICDB_FIELD_ALBUMS"
+        	description="COM_AVISAMUSICDB_FIELD_ALBUMS_DESC"
+        />
+		
+        <field
+        	name="genres"
+		 	type="sql"
+        	translate="false" 
+        	query="SELECT id, title FROM #__avisamusicdb_genres WHERE published = 1" 
+        	key_field="id" 
+        	value_field="title"
+        	multiple="multiple"
+        	label="COM_AVISAMUSICDB_FIELD_GENRES"
+        	description="COM_AVISAMUSICDB_FIELD_GENRES_DESC"
+        />
+
+		<field name="duration" 
+			type="text"
+			label="COM_AVISAMUSICDB_FIELD_DURATION"
+			description="COM_AVISAMUSICDB_FIELD_DURATION_DESC"
+		/>
+
+		 <field name="country" 
+        	type="avisacountries"
+        	label="COM_AVISAMUSICDB_FIELD_COUNTRY" 
+        	description="COM_AVISAMUSICDB_FIELD_COUNTRY_DESC"
+        />
+
+		<field name="m_language" 
+			type="text"
+			label="COM_AVISAMUSICDB_FIELD_LANGUAGE"
+			description="COM_AVISAMUSICDB_FIELD_LANGUAGE_DESC"
+		/>
+
+		<field name="dvdlink" 
+			type="text"
+			label="COM_AVISAMUSICDB_FIELD_BUY_DVD"
+			description="COM_AVISAMUSICDB_FIELD_BUY_DVD_DESC"
+		/>
+
+		<field name="language" type="language">
+			<option value="*">COM_AVISAMUSICDB_MUSICS_LANGUAGE_ALL</option>
+		</field>
+
+		<field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL" default="1" />
+
+		<field name="published" type="list" label="JSTATUS" filter="intval" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+
+	</fieldset>
+
+	<fieldset name="music_links" label="COM_AVISAMUSICDB_FIELDSET_MUSIC_LINKS" class="tab-pane">
+
+		<field 
+			name="show_time" 
+			type="subform" formsource="administrator/components/com_avisamusicdb/models/forms/subform-show-time.xml"
+			multiple= "true"
+			buttons= "add,remove"
+			layout="joomla.form.field.subform.repeatable-table"
+			groupByFieldset="false" 
+			label="COM_AVISAMUSICDB_FIELDSET_MUSIC_SHOW_TIMES"
+    	/>
+
+		<field name="website"
+			type="url"
+			hint="https://www.thismusic.com"
+			label="COM_AVISAMUSICDB_FIELD_WEBSITE"
+			size="10"
+		/>
+
+		<field name="facebook"
+			type="url"
+			class="inputbox"
+			hint="https://www.facebook.com/avisapro"
+			label="COM_AVISAMUSICDB_FIELD_FACEBOOK"
+			size="10"
+		/>
+
+		<field name="twitter"
+			type="url"
+			class="inputbox"
+			hint="https://twitter.com/avisapro"
+			label="COM_AVISAMUSICDB_FIELD_TWITTER"
+			size="10"
+		/>
+
+		<field name="gplus"
+			type="url"
+			hint="https://plus.google.com/+avisapro"
+			label="COM_AVISAMUSICDB_FIELD_GOOGLE_PLUS"
+			size="10"
+		/>
+
+		<field name="youtube"
+			type="url"
+			hint="https://www.youtube.com/user/avisapro"
+			label="COM_AVISAMUSICDB_FIELD_YOUTUBE"
+			size="10"
+		/>
+
+		<field name="vimeo"
+			type="url"
+			class="inputbox"
+			hint="https://vimeo.com/user12615648"
+			label="COM_AVISAMUSICDB_FIELD_VIMEO"
+			size="10"
+		/>
+
+	</fieldset>
+
+	<fieldset name="music_trailers" label="COM_AVISAMUSICDB_FIELDSET_MUSIC_TRAILER_URLS" class="tab-pane">
+
+		<field type="spacer" name="t_1" groupclass="avisamusicdb-spacer" label="COM_AVISAMUSICDB_FIELD_MUSIC_TRAILER_ONE" />
+		
+		<field name="trailer_one_title"
+			type="url"
+			class="inputbox"
+			hint="COM_AVISAMUSICDB_FIELD_TRAILER_TITLE_HINT"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_TITLE"
+			size="10"
+		/>
+
+		<field name="trailer_one"
+			type="url"
+			class="inputbox"
+			hint="https://www.youtube.com/watch?v=rUIVA-rTbOI"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_URL"
+			size="10"
+		/>
+
+		<field name="t_thumb_one"
+		 	type="media"
+			thumbsize="265x165"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_THUMB"
+			description="COM_AVISAMUSICDB_FIELD_TRAILER_THUMB_DESC"
+		/>
+		
+		<field type="spacer" name="mt_2" groupclass="avisamusicdb-spacer" label="COM_AVISAMUSICDB_FIELD_MUSIC_TRAILER_TWO" />
+
+		<field name="trailer_two_title"
+			type="url"
+			class="inputbox"
+			hint="COM_AVISAMUSICDB_FIELD_TRAILER_TITLE_HINT"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_TITLE"
+			size="10"
+		/>
+
+		<field name="trailer_two"
+			type="url"
+			class="inputbox"
+			hint="https://www.youtube.com/watch?v=rUIVA-rTbOI"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_URL"
+			size="10"
+		/>
+		<field name="t_thumb_two"
+		 	type="media"
+			thumbsize="265x165"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_THUMB"
+			description="COM_AVISAMUSICDB_FIELD_TRAILER_THUMB_DESC"
+		/>
+
+		<field type="spacer" name="mt_3" groupclass="avisamusicdb-spacer" label="COM_AVISAMUSICDB_FIELD_MUSIC_TRAILER_THREE" />
+
+		<field name="trailer_three_title"
+			type="url"
+			class="inputbox"
+			hint="COM_AVISAMUSICDB_FIELD_TRAILER_TITLE_HINT"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_TITLE"
+			size="10"
+		/>
+
+		<field name="trailer_three"
+			type="url"
+			class="inputbox"
+			hint="https://www.youtube.com/watch?v=rUIVA-rTbOI"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_URL"
+			size="10"
+		/>
+		<field name="t_thumb_three"
+		 	type="media"
+		 	thumbsize="265x165"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_THUMB"
+			description="COM_AVISAMUSICDB_FIELD_TRAILER_THUMB_DESC"
+		/>
+
+		<field type="spacer" name="mt_4" groupclass="avisamusicdb-spacer" label="COM_AVISAMUSICDB_FIELD_MUSIC_TRAILER_FOUR" />
+
+		<field name="trailer_four_title"
+			type="url"
+			class="inputbox"
+			hint="COM_AVISAMUSICDB_FIELD_TRAILER_TITLE_HINT"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_TITLE"
+			size="10"
+		/>
+
+		<field name="trailer_four"
+			type="url"
+			class="inputbox"
+			hint="https://www.youtube.com/watch?v=rUIVA-rTbOI"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_URL"
+			size="10"
+		/>
+		<field name="t_thumb_four"
+		 	type="media"
+		 	thumbsize="265x165"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_THUMB"
+			description="COM_AVISAMUSICDB_FIELD_TRAILER_THUMB_DESC"
+		/>
+
+		<field type="spacer" name="mt_5" groupclass="avisamusicdb-spacer" label="COM_AVISAMUSICDB_FIELD_MUSIC_TRAILER_FIVE" />
+
+		<field name="trailer_five_title"
+			type="url"
+			class="inputbox"
+			hint="COM_AVISAMUSICDB_FIELD_TRAILER_TITLE_HINT"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_TITLE"
+			size="10"
+		/>
+
+		<field name="trailer_five"
+			type="url"
+			class="inputbox"
+			hint="https://www.youtube.com/watch?v=rUIVA-rTbOI"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_URL"
+			size="10"
+		/>
+		<field name="t_thumb_five"
+		 	type="media"
+		 	thumbsize="265x165"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_THUMB"
+			description="COM_AVISAMUSICDB_FIELD_TRAILER_THUMB_DESC"
+		/>
+
+		<field type="spacer" name="mt_6" groupclass="avisamusicdb-spacer" label="COM_AVISAMUSICDB_FIELD_MUSIC_TRAILER_SIX" />
+		
+		<field name="trailer_six_title"
+			type="url"
+			class="inputbox"
+			hint="COM_AVISAMUSICDB_FIELD_TRAILER_TITLE_HINT"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_TITLE"
+			size="10"
+		/>
+
+		<field name="trailer_six"
+			type="url"
+			class="inputbox"
+			hint="https://www.youtube.com/watch?v=rUIVA-rTbOI"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_URL"
+			size="10"
+		/>
+		<field name="t_thumb_six"
+		 	type="media"
+		 	thumbsize="265x165"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_THUMB"
+			description="COM_AVISAMUSICDB_FIELD_TRAILER_THUMB_DESC"
+		/>
+
+		<field type="spacer" name="mt_7" groupclass="avisamusicdb-spacer" label="COM_AVISAMUSICDB_FIELD_MUSIC_TRAILER_SEVEN" />
+
+		<field name="trailer_seven_title"
+			type="url"
+			class="inputbox"
+			hint="COM_AVISAMUSICDB_FIELD_TRAILER_TITLE_HINT"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_TITLE"
+			size="10"
+		/>
+
+		<field name="trailer_seven"
+			type="url"
+			class="inputbox"
+			hint="https://www.youtube.com/watch?v=rUIVA-rTbOI"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_URL"
+			size="10"
+		/>
+		<field name="t_thumb_seven"
+		 	type="media"
+		 	thumbsize="265x165"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_THUMB"
+			description="COM_AVISAMUSICDB_FIELD_TRAILER_THUMB_DESC"
+		/>
+
+		<field type="spacer" name="mt_8" groupclass="avisamusicdb-spacer" label="COM_AVISAMUSICDB_FIELD_MUSIC_TRAILER_EIGHT" />
+
+		<field name="trailer_eight_title"
+			type="url"
+			class="inputbox"
+			hint="COM_AVISAMUSICDB_FIELD_TRAILER_TITLE_HINT"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_TITLE"
+			size="10"
+		/>
+
+		<field name="trailer_eight"
+			type="url"
+			class="inputbox"
+			hint="https://www.youtube.com/watch?v=rUIVA-rTbOI"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_URL"
+			size="10"
+		/>
+		<field name="t_thumb_eight"
+		 	type="media"
+		 	thumbsize="265x165"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_THUMB"
+			description="COM_AVISAMUSICDB_FIELD_TRAILER_THUMB_DESC"
+		/>
+
+		<field type="spacer" name="mt_9" groupclass="avisamusicdb-spacer" label="COM_AVISAMUSICDB_FIELD_MUSIC_TRAILER_NINE" />
+
+		<field name="trailer_nine_title"
+			type="url"
+			class="inputbox"
+			hint="COM_AVISAMUSICDB_FIELD_TRAILER_TITLE_HINT"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_TITLE"
+			size="10"
+		/>
+
+		<field name="trailer_nine"
+			type="url"
+			class="inputbox"
+			hint="https://www.youtube.com/watch?v=rUIVA-rTbOI"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_URL"
+			size="10"
+		/>
+		<field name="t_thumb_nine"
+		 	type="media"
+		 	thumbsize="265x165"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_THUMB"
+			description="COM_AVISAMUSICDB_FIELD_TRAILER_THUMB_DESC"
+		/>
+
+		<field type="spacer" name="mt_10" groupclass="avisamusicdb-spacer" label="COM_AVISAMUSICDB_FIELD_MUSIC_TRAILER_TEN" />
+
+		<field name="trailer_ten_title"
+			type="url"
+			class="inputbox"
+			hint="COM_AVISAMUSICDB_FIELD_TRAILER_TITLE_HINT"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_TITLE"
+			size="10"
+		/>
+
+		<field name="trailer_ten"
+			type="url"
+			class="inputbox"
+			hint="https://www.youtube.com/watch?v=rUIVA-rTbOI"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_URL"
+			size="10"
+		/>
+		<field name="t_thumb_ten"
+		 	type="media"
+		 	thumbsize="265x165"
+			label="COM_AVISAMUSICDB_FIELD_TRAILER_THUMB"
+			description="COM_AVISAMUSICDB_FIELD_TRAILER_THUMB_DESC"
+		/>
+	</fieldset>
+</form>	

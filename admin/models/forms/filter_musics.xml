@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field name="search" type="text" label="JSEARCH_FILTER" description="" hint="JSEARCH_FILTER" />
+		<field name="published" type="status" label="JOPTION_SELECT_PUBLISHED" description="JOPTION_SELECT_PUBLISHED_DESC" onchange="this.form.submit();">
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+        </field>
+    </fields>
+    <fields name="list">
+        <field name="fullordering" type="list" label="COM_CONTACT_LIST_FULL_ORDERING" description="COM_CONTACT_LIST_FULL_ORDERING_DESC" default="a.name ASC" onchange="this.form.submit();">
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="a.id ASC">JGRID_HEADING_ID_ASC</option>
+			<option value="a.id DESC">JGRID_HEADING_ID_DESC</option>
+            <option value="a.ordering ASC">JGRID_HEADING_ORDERING_ASC</option>
+            <option value="a.ordering DESC">JGRID_HEADING_ORDERING_DESC</option>
+            <option value="a.published ASC">JSTATUS_ASC</option>
+            <option value="a.published DESC">JSTATUS_DESC</option>
+            <option value="a.title ASC">JGLOBAL_TITLE_ASC</option>
+            <option value="a.title DESC">JGLOBAL_TITLE_DESC</option> 
+            <option value="a.directors ASC">COM_AVISAMUSICDB_FILTER_DIRECTOR_ASC</option> 
+            <option value="a.directors DESC">COM_AVISAMUSICDB_FILTER_DIRECTOR_DESC</option> 
+            <option value="a.actors ASC">COM_AVISAMUSICDB_FILTER_ACTORS_ASC</option> 
+            <option value="a.actors DESC">COM_AVISAMUSICDB_FILTER_ACTORS_DESC</option> 
+			<option value="a.album_name ASC">COM_AVISAMUSICDB_FILTER_ALBUMS_ASC</option> 
+            <option value="a.album_name DESC">COM_AVISAMUSICDB_FILTER_ALBUMS_DESC</option>
+            <option value="a.genres ASC">COM_AVISAMUSICDB_FILTER_GENRES_ASC</option> 
+            <option value="a.genres DESC">COM_AVISAMUSICDB_FILTER_GENRES_DESC</option> 
+            <option value="a.release_date ASC">COM_AVISAMUSICDB_FILTER_RELEASE_DATE_ASC</option> 
+            <option value="a.release_date DESC">COM_AVISAMUSICDB_FILTER_RELEASE_DATE_DESC</option> 
+        </field>
+        <field name="limit" type="limitbox" label="COM_CONTACT_LIST_LIMIT" description="COM_CONTACT_LIST_LIMIT_DESC" default="25" class="input-mini" onchange="this.form.submit();" />
+    </fields>
+</form>
+	

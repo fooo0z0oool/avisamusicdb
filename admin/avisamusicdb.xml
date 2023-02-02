@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.3" type="component" method="upgrade">
+  <name>com_avisamusicdb</name>
+  <creationDate>2023-01-01</creationDate>
+  <author>AvisaPro</author>
+  <authorEmail>support@avisapro.ir</authorEmail>
+  <authorUrl>https://www.avisapro.ir</authorUrl>
+  <copyright>Copyright (c) 2020 - 2023 AvisaPro. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later</license>
+  <version>2.0.0</version>
+  <description>A complete music database component for Joomla 3+</description>
+
+  <scriptfile>installer.script.php</scriptfile>
+
+  <updateservers>
+    <server type="extension" priority="1" name="Avisa  Music Database">https://www.avisapro.ir/updates/com-avisamusicdb.xml</server>
+  </updateservers>
+
+  <install>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/install/mysql/install.sql</file>
+      <file driver="mysql">sql/install/mysql/install.sql</file>
+
+      <file driver="mysqli" charset="utf8">sql/install/mysql/install.sql</file>
+      <file driver="mysqli">sql/install/mysql/install.sql</file>
+    </sql>
+  </install>
+
+  <update>
+    <schemas>
+      <schemapath type="mysql">sql/updates/mysql</schemapath>
+      <schemapath type="mysqli">sql/updates/mysql</schemapath>
+    </schemas>
+  </update>
+
+  <uninstall>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/uninstall/mysql/uninstall.sql</file>
+    </sql>
+  </uninstall>
+
+  <files folder="site">
+    <filename>avisamusicdb.php</filename>
+    <filename>controller.php</filename>
+    <filename>router.php</filename>
+
+    <folder>assets</folder>
+    <folder>controllers</folder>
+    <folder>fields</folder>
+    <folder>helpers</folder>
+    <folder>layouts</folder>
+    <folder>models</folder>
+    <folder>views</folder>
+  </files>
+
+  <languages folder="language/site">
+    <language tag="en-GB">en-GB/en-GB.com_avisamusicdb.ini</language>
+  </languages>
+
+  <administration>
+    <menu>COM_AVISAMUSICDB</menu>
+
+    <submenu>
+      <menu link="option=com_avisamusicdb&amp;view=celebrities" view="celebrities" img="class:generic" alt="avisamusicdb/celebrities">com_avisamusicdb_celebrities</menu>
+	  <menu link="option=com_avisamusicdb&amp;view=albums" view="albums" img="class:generic" alt="avisamusicdb/albums">com_avisamusicdb_albums</menu>
+      <menu link="option=com_avisamusicdb&amp;view=genres" view="genres" img="class:generic" alt="avisamusicdb/genres">com_avisamusicdb_genres</menu>
+      <menu link="option=com_avisamusicdb&amp;view=musics" view="musics" img="class:generic" alt="avisamusicdb/musics">com_avisamusicdb_musics</menu>
+      <menu link="option=com_avisamusicdb&amp;view=reviews" view="reviews" img="class:generic" alt="avisamusicdb/reviews">com_avisamusicdb_reviews</menu>
+    </submenu>
+
+    <files folder="admin">
+      <filename>access.xml</filename>
+      <filename>config.xml</filename>
+      <filename>avisamusicdb.php</filename>
+      <filename>controller.php</filename>
+
+      <folder>assets</folder>
+      <folder>sql</folder>
+      <folder>tables</folder>
+      <folder>views</folder>
+      <folder>controllers</folder>
+      <folder>models</folder>
+      <folder>helpers</folder>
+    </files>
+
+    <languages folder="language/admin">
+      <language tag="en-GB">en-GB/en-GB.com_avisamusicdb.ini</language>
+      <language tag="en-GB">en-GB/en-GB.com_avisamusicdb.sys.ini</language>
+    </languages>
+  </administration>
+</extension>
+    

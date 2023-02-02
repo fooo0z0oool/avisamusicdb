@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<fieldset name="basic" label="COM_SOMUSICDB_CONF_BASIC">
+		<field type="text" name="musics_limit" default="12" label="COM_SOMUSICDB_CONF_MUSIC_LIMIT" description="COM_SOMUSICDB_CONF_MUSIC_LIMIT_DESC"/>
+		<field name="music_columns" type="list" default="4" label="COM_SOMUSICDB_CONF_MUSIC_COLUMNS" description="COM_SOMUSICDB_CONF_MUSIC_COLUMNS_DESC">
+			<option value="3">3</option>	
+			<option value="4">4</option>	
+		</field>
+		<field type="text" name="review_limit" default="12" label="COM_SOMUSICDB_CONF_REVIEW_LIMIT" description="COM_SOMUSICDB_CONF_REVIEW_LIMIT_DESC" />
+
+		<field name="spacer1" type="spacer" hr="true" />
+		<field type="text" name="celebrities_limit" default="12" label="COM_SOMUSICDB_CONF_CELEBRITIES_LIMIT" description="COM_SOMUSICDB_CONF_MUSIC_LIMIT_DESC" />
+		<field name="celebrities_columns" type="list" default="4" label="COM_SOMUSICDB_CONF_CELEBRITIES_COLUMNS" description="COM_SOMUSICDB_CONF_CELEBRITIES_COLUMNS_DESC">	
+		
+		<field name="spacer1" type="spacer" hr="true" />
+		<field type="text" name="albums_limit" default="12" label="COM_SOMUSICDB_CONF_ALBUMS_LIMIT" description="COM_SOMUSICDB_CONF_MUSIC_LIMIT_DESC" />
+		<field name="albums_columns" type="list" default="4" label="COM_SOMUSICDB_CONF_ALBUMS_COLUMNS" description="COM_SOMUSICDB_CONF_CELEBRITIES_COLUMNS_DESC">	
+			<option value="3">3</option>	
+			<option value="4">4</option>	
+		</field>
+
+		<field name="spacer2" type="spacer" hr="true" />
+		<field type="text" name="search_limit" default="12" label="COM_SOMUSICDB_CONF_SEARCH_ITEM_LIMIT" description="COM_SOMUSICDB_CONF_SEARCH_ITEM_LIMIT_DESC" />
+		<field name="search_columns" type="list" default="4" label="COM_SOMUSICDB_CONF_SEARCH_ITEM_COLUMNS" description="COM_SOMUSICDB_CONF_SEARCH_ITEM_COLUMNS_DESC">
+			<option value="3">3</option>	
+			<option value="4">4</option>	
+		</field>
+
+		<field name="spacer3" type="spacer" hr="true" />
+		<field type="text" name="trailer_limit" default="12" label="COM_SOMUSICDB_CONF_TRAILERS_LIMIT" description="COM_SOMUSICDB_CONF_TRAILERS_LIMIT_DESC" />
+		<field name="trailer_columns" type="list" default="4" label="COM_SOMUSICDB_CONF_TRAILERS_COLUMNS" description="COM_SOMUSICDB_CONF_TRAILERS_COLUMNS_DESC">
+			<option value="3">3</option>	
+			<option value="4">4</option>	
+		</field>
+	</fieldset>
+
+	<fieldset name="licenseupdate">
+		<field name="joomshaper_email" type="email" label="COM_SOMUSICDB_CONF_JOOMSHAPER_EMAIL" description="COM_SOMUSICDB_CONF_JOOMSHAPER_EMAIL_DESC" />
+		<field name="joomshaper_license_key" type="text" label="COM_SOMUSICDB_CONF_JOOMSHAPER_LICENSE_KEY" description="COM_SOMUSICDB_CONF_JOOMSHAPER_LICENSE_KEY_DESC" />
+	</fieldset>
+
+	<fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+		<field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" class="inputbox" filter="rules" component="com_avisamusicdb" section="component" />
+	</fieldset>	
+</config>

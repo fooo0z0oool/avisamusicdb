@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="params">
+            <fieldset hidden="true" name="honours" repeat="true" addrulepath="administrator/components/com_avisamusicdb/models/rules">
+                <field name="theatre_name" 
+                    type="text"
+                    label="COM_AVISAMUSICDB_FIELD_THEATRE_NAME"
+                    description="COM_AVISAMUSICDB_FIELD_THEATRE_NAME_DESC"
+                    hint="California Theatre"
+                />
+
+                <field name="theatre_location" 
+                    type="text"
+                    label="COM_AVISAMUSICDB_FIELD_THEATRE_LOCATION"
+                    description="COM_AVISAMUSICDB_FIELD_THEATRE_LOCATION_DESC"
+                    hint="CA 94704, USA"
+                />
+
+                <field name="time"
+                    validate="pipetime"
+                    message="" 
+                    type="text"
+                    label="COM_AVISAMUSICDB_FIELD_THEATRE_TIME"
+                    description="COM_AVISAMUSICDB_FIELD_THEATRE_TIME_DESC"
+                    hint="9:30 | 11:30 | 13:45 | 17:30 | 19:30"
+                />
+
+                <field name="ticket_url" 
+                    type="url"
+                    label="COM_AVISAMUSICDB_FIELD_TICKET_URL"
+                    description="COM_AVISAMUSICDB_FIELD_TICKET_URL_DESC"
+                    hint="http://avisapro.ir/music/buy-ticket"
+                />
+
+            </fieldset>
+    </fields>
+</form>

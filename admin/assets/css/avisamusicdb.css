@@ -1,0 +1,29 @@
+/**
+* @package     Avisa  Music Database
+* @copyright   Copyright (C) 2020 - 2023 AvisaPro. All rights reserved.
+* @license     GNU General Public License version 2 or later.
+*/
+
+.text-capitalize{
+	text-transform: capitalize;
+}
+
+.avisamusicdb-spacer{
+	max-width: 1024px;
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+	margin-top: 20px;
+}
+
+.avisamusicdb-spacer .control-label {
+	font-weight: 500;
+	font-size: 14px;
+}
+
+/* #submenu > li:last-child {
+	display: none;
+} */
+
+.text-area-order {
+	display: none !important;
+}

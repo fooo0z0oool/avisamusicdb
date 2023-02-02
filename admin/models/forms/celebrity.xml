@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form validate="true"  serverside_validate="true" tabbed="1" >
+	<fieldset name="basic_configuration" label="COM_AVISAMUSICDB_FIELDSET_BASIC_INFO" class="tab-pane active avisamusicw-view-form-class" innerclass="span6">
+        
+        <field name="id" type="hidden"/>
+
+		<field name="title" type="text"
+			class="inputbox"
+			label="COM_AVISAMUSICDB_FIELD_CELEBRITY_NAME"
+			description="COM_AVISAMUSICDB_FIELD_CELEBRITY_NAME_DESC"
+			required="true"
+			labelclass="avisamusicw-label"
+		/>
+
+		<field name="alias" type="text"
+			class="inputbox"
+			label="COM_AVISAMUSICDB_FIELD_ALIAS"
+			description="COM_AVISAMUSICDB_FIELD_ALIAS_DESC"
+			labelclass="avisamusicw-label"
+		/>
+
+		<field name="celebrity_type" 
+			type="list" 
+			label="COM_AVISAMUSICDB_FIELD_CELEBRITY_TYPE" 
+			description="COM_AVISAMUSICDB_FIELD_CELEBRITY_TYPE_DESC" 
+			labelclass="avisamusicw-label"
+			required="true">
+			<option value="both">COM_AVISAMUSICDB_OPTION_BOTH</option>
+			<option value="actor">COM_AVISAMUSICDB_OPTION_ACTOR_ACTRES</option>
+			<option value="director">COM_AVISAMUSICDB_OPTION_DIRECTOR</option>
+		</field>
+
+		<field name="gender" type="list" 
+			label="COM_AVISAMUSICDB_FIELD_GENDER" 
+			description="COM_AVISAMUSICDB_FIELD_GENDER_DESC" 
+			labelclass="avisamusicw-label"
+			default="male"
+			required="true">
+			<option value="male">COM_AVISAMUSICDB_GENDER_OPTION_MALE</option>
+			<option value="female">COM_AVISAMUSICDB_GENDER_OPTION_FEMALE</option>
+			<option value="others">COM_AVISAMUSICDB_GENDER_OPTION_OTHERS</option>
+		</field>
+
+		<field name="featured"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="COM_AVISAMUSICDB_FIELD_FEATURED"
+			description="COM_AVISAMUSICDB_FIELD_FEATURED_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="biography" 
+			type="editor"
+			class="inputbox"
+			label="COM_AVISAMUSICDB_FIELD_BIOGRAPHY"
+			description="COM_AVISAMUSICDB_FIELD_BIOGRAPHY_DESC"
+			required="true"
+			filter="safehtml"
+			labelclass="avisamusicw-label"
+		 />
+
+		<field name="designation" type="text"
+			class="inputbox"
+			label="COM_AVISAMUSICDB_FIELD_DESIGNATION"
+			description="COM_AVISAMUSICDB_FIELD_DESIGNATION_DESC"
+			required="true"
+			labelclass="avisamusicw-label"
+		/>
+
+		<field name="profile_image"
+		 	type="media"
+			label="COM_AVISAMUSICDB_FIELD_PROFILE_IMAGE"
+			description="COM_AVISAMUSICDB_FIELD_PROFILE_IMAGE_DESC"
+			required="true"
+		 />
+
+		<field name="cover_image"
+		 	type="media"
+			label="COM_AVISAMUSICDB_FIELD_COVER_IMAGE"
+			description="COM_AVISAMUSICDB_FIELD_COVER_IMAGE_DESC"
+			required="true"
+		/>
+
+		<field name="language" type="language" label="COM_AVISAMUSICDB_MUSICS_LANGUAGE_LABEL">
+			<option value="*">COM_AVISAMUSICDB_MUSICS_LANGUAGE_ALL</option>
+		</field>
+		
+		<field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL" default="1" />
+
+		<field name="published" type="list" label="JSTATUS" filter="intval" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+
+	</fieldset>
+
+	<fieldset name="personal_info" label="COM_AVISAMUSICDB_FIELDSET_PERSONAL_INFO" class="tab-pane">	
+
+		<field name="birth_name" 
+			type="text"
+			class="inputbox"
+			label="COM_AVISAMUSICDB_FIELD_BIRTH_NAME"
+			description="COM_AVISAMUSICDB_FIELD_BIRTH_NAME_DESC"
+			required="true"
+			labelclass="avisamusicw-label"
+		/>
+
+		<field name="dob" 
+			type="calendar" 
+			default="1992-12-25"
+			hint="year-month-day"
+			label="COM_AVISAMUSICDB_FIELD_DATE_OF_BIRTH"
+			description="COM_AVISAMUSICDB_FIELD_DATE_OF_BIRTH_DESC"
+			labelclass="avisamusicw-label"
+		/>
+
+		<field name="residence" 
+			type="text"
+			class="inputbox"
+			label="COM_AVISAMUSICDB_FIELD_RESIDENCE"
+			description="COM_AVISAMUSICDB_FIELD_RESIDENCE_DESC"
+			labelclass="avisamusicw-label"
+		/>
+
+		<field name="height" 
+			type="text"
+			class="inputbox"
+			label="COM_AVISAMUSICDB_FIELD_HEIGHT"
+			description="COM_AVISAMUSICDB_FIELD_HEIGHT_DESC"
+			labelclass="avisamusicw-label"
+		/>
+
+	</fieldset>
+
+	<fieldset name="actior_links" label="COM_AVISAMUSICDB_FIELDSET_CELEBRITY_LINKS" class="tab-pane">
+		
+		<field name="website"
+			type="url"
+			class="inputbox"
+			hint="https://www.thismusic.com"
+			label="COM_AVISAMUSICDB_FIELD_WEBSITE"
+			size="10"
+			labelclass="avisamusicw-label"
+		/>
+
+		<field name="facebook"
+			type="url"
+			class="inputbox"
+			hint="https://www.facebook.com/joomshaper"
+			label="COM_AVISAMUSICDB_FIELD_FACEBOOK"
+			size="10"
+			labelclass="avisamusicw-label"
+		/>
+
+		<field name="twitter"
+			type="url"
+			class="inputbox"
+			hint="https://twitter.com/joomshaper"
+			label="COM_AVISAMUSICDB_FIELD_TWITTER"
+			size="10"
+			labelclass="avisamusicw-label"
+		/>
+
+		<field name="linkedin"
+			type="url"
+			class="inputbox"
+			hint="https://linkedin.com/joomshaper"
+			label="COM_AVISAMUSICDB_FIELD_LINKEDIN"
+			size="10"
+			labelclass="avisamusicw-label"
+		/>
+
+		<field name="gplus"
+			type="url"
+			class="inputbox"
+			hint="https://plus.google.com/+Joomshapers"
+			label="COM_AVISAMUSICDB_FIELD_GOOGLE_PLUS"
+			size="10"
+		/>
+
+		<field name="youtube"
+			type="url"
+			class="inputbox"
+			hint="https://www.youtube.com/user/joomshaper"
+			label="COM_AVISAMUSICDB_FIELD_YOUTUBE"
+			size="10"
+			labelclass="avisamusicw-label"
+		/>
+
+		<field name="vimeo"
+			type="url"
+			class="inputbox"
+			hint="https://vimeo.com/user12615648"
+			label="COM_AVISAMUSICDB_FIELD_VIMEO"
+			size="10"
+			labelclass="avisamusicw-label"
+		/>
+
+	</fieldset>
+
+</form>

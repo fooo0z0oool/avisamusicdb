@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form validate="true">
+	<fieldset name="basic" label="COM_AVISAMUSICDB_FIELDSET_BASIC_INFO" class="tab-pane active avisamusicw-view-form-class">
+		<field name="id" type="hidden" />
+		<field name="musicid" type="sql" translate="false" query="SELECT id, title FROM #__avisamusicdb_musics WHERE published = 1" key_field="id" value_field="title" label="COM_AVISAMUSICDB_FIELD_MUSIC_NAME" required="true" />
+
+		<field name="created_by" label="COM_AVISAMUSICDB_FIELD_USER" description="COM_AVISAMUSICDB_FIELD_USER_DESC" type="user" />
+
+		<field name="rating" type="list" class="inputbox" default="1" label="COM_AVISAMUSICDB_FIELD_RATING" description="COM_AVISAMUSICDB_FIELD_RATING_DESC" required="true">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+
+		</field>
+
+		<field name="review" type="textarea" class="inputbox span8" label="COM_AVISAMUSICDB_FIELD_MUSIC_REVIEW" description="COM_AVISAMUSICDB_FIELD_MUSIC_REVIEW_DESC" rows="10" cols="100" />
+
+		<field name="published" type="list" label="JSTATUS" filter="intval" default="1" class="inputbox">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+	</fieldset>
+</form>
