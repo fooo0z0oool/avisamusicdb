@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="system" method="upgrade">
+  <name>System - Avisa  Music Database Updater</name>
+  <author>AvisaPro.com</author>
+  <creationDate>Jan 2016</creationDate>
+  <copyright>Copyright (C) 2010 - 2016 AvisaPro. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GPLv2 or later</license>
+  <authorEmail>support@avisapro.ir</authorEmail>
+  <authorUrl>www.avisapro.ir</authorUrl>
+  <version>1.0.1</version>
+  <description>Avisa  Music Database Updater Plugin</description>
+
+  <files>
+    <filename plugin="avisamusicdbupdater">avisamusicdbupdater.php</filename>
+  </files>
+</extension>
