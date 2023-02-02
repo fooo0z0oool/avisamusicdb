@@ -1,0 +1,169 @@
+/**
+* @package     Joomla.Site
+* @subpackage  mod_avisamusicdb_tab
+*
+* @copyright   Copyright (C) 2020 - 2023 AvisaPro. All rights reserved.
+* @license     GNU General Public License version 2 or later.
+*/
+
+.avisamusicdb-tab .owl-nav {
+  position: absolute;
+  top: -70px;
+  right: 0;
+}
+.avisamusicdb-tab .owl-nav button{
+  position: relative;
+  width: 20px;
+}
+
+.avisamusicdb-tab .owl-nav:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: #e3e3e3;
+  width: 1px;
+  height: 30px;
+  margin-top: -15px;
+  margin-left: 6px;
+}
+
+.avisamusicdb-tab .owl-nav .owl-prev {
+  background: transparent !important;
+  text-indent: -999em;
+  position: relative;
+}
+
+.avisamusicdb-tab .owl-nav .owl-prev::after {
+  content: '\e900';
+  font-family: 'avisamusicdb';
+  color: #e3e3e3;
+  margin-left: 10px;
+  text-indent: 0;
+  position: absolute;
+  right: 0;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+}
+
+.avisamusicdb-tab .owl-nav .owl-prev:hover::after {
+  color: #f26522;
+}
+
+.avisamusicdb-tab .owl-nav .owl-next {
+  background: transparent !important;
+  text-indent: -999em;
+  position: relative;
+}
+
+.avisamusicdb-tab .owl-nav .owl-next::after {
+  content: '\e901';
+  font-family: 'avisamusicdb';
+  color: #e3e3e3;
+  margin-left: 10px;
+  text-indent: 0;
+  position: absolute;
+  right: 0;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+}
+
+.avisamusicdb-tab .owl-nav .owl-next:hover::after {
+  color: #f26522;
+}
+
+.avisamusicdb-tab .nav-tabs {
+  margin-bottom: 30px;
+
+}
+
+.avisamusicdb-tab .nav-tabs>li>a {
+  color: #727272;
+  font-weight: 400;
+}
+
+.avisamusicdb-tab .nav-tabs>li>a:hover {
+  background-color: transparent;
+  color: #000;
+}
+
+.avisamusicdb-tab .nav-tabs>li.active>a:after {
+  width: 50%;
+}
+
+.avisamusicdb-tab .music-details .music-name a {
+  color: #000;
+}
+
+.avisamusicdb-tab .music-details .music-name a:hover {
+  color: #26aae1;
+}
+
+
+.avisamusicdb-tab .music-poster {
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  margin-bottom: 15px;
+}
+
+.avisamusicdb-tab .music-poster .play-icon {
+  font-size: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  color: #fff;
+  z-index: 10;
+}
+
+.avisamusicdb-tab .item:hover .play-icon {
+  -webkit-transform: translate(-50%, -40%) scale(1);
+  transform: translate(-50%, -40%) scale(1);
+  transition-delay: all .15s;
+  -webkit-transition-delay: all .15s;
+  text-decoration: none;
+}
+
+.avisamusicdb-tab .item:hover .play-icon:hover {
+  -webkit-transform: translate(-50%, -40%) scale(1.2) !important;
+  transform: translate(-50%, -40%) scale(1.2) !important;
+}
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  z-index: 99999;
+  display: none;
+}
+
+.video-container #video-player {
+  width: 100%;
+  height: 100%;
+}
+
+.video-container .video-close {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 999;
+  color: #fff;
+  font-size: 30px;
+  transition: 400ms;
+}
+
+.video-container .video-close:hover {
+  color: #08c;
+}

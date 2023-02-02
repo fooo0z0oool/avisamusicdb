@@ -1,0 +1,248 @@
+/**
+ * @package     Joomla.Site
+ * @subpackage  mod_avisa_musicdb_trailers
+ *
+ * @copyright   Copyright (C) 2020 - 2023 AvisaPro. All rights reserved.
+ * @license     GNU General Public License version 2 or later.
+ */
+
+.sppb-trailers-modal-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+.avisamusicdb-trailer-item .play-icon {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  font-size: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: all .3s;
+  z-index: 10;
+}
+
+.avisamusicdb-trailer-item.leading {
+  width: 100%;
+  position: relative;
+}
+
+.avisamusicdb-trailer-item.leading .avisamusicdb-trailer {
+  position: relative;
+}
+
+.avisamusicdb-trailer-item.leading .avisamusicdb-trailer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.avisamusicdb-trailer-item.leading .avisa-avisamusicdb-trailers-info {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 20px 30px;
+  z-index: 999;
+}
+
+.avisamusicdb-trailer-item.leading .avisa-avisamusicdb-trailers-info {
+  z-index: 10;
+}
+
+.avisamusicdb-trailer-item.leading .play-icon {
+  font-size: 130px;
+}
+
+.avisamusicdb-trailer-item.leading .thumb-img {
+  display: block;
+}
+
+.avisamusicdb-trailer-item.leading .sppb-modal-rating {
+  display: block !important;
+}
+
+.avisamusicdb-trailer-item.leading h4.music-title {
+  margin: 0;
+}
+
+.avisamusicdb-trailer-item.leading p.avisamusicdb-genry {
+  color: #fff !important;
+}
+
+.avisamusicdb-trailer-item.leading .avisamusicdb-trailer-info-block {
+  margin-top: 5px;
+}
+
+.avisamusicdb-trailer-item.subleading {
+  margin-top: 30px;
+  margin-bottom: 0 !important;
+}
+
+.avisamusicdb-trailer-item.subleading .trailer-image-wrap {
+  position: relative;
+}
+
+.avisamusicdb-trailer-item.subleading .trailer-image-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.avisamusicdb-trailer-item.subleading .count-rating {
+  display: none;
+}
+
+.trailers-sub-item {
+  margin: -15px;
+}
+
+.trailers-sub-item .avisamusicdb-trailer-item {
+  padding: 15px;
+}
+
+.trailers-sub-item .avisamusicdb-trailer-item .sppb-modal-title {
+  font-size: 18px;
+}
+
+.avisamusicdb-trailer-item {
+  width: 25%;
+  float: left;
+  position: relative;
+}
+
+.avisamusicdb-trailer-item img {
+  width: 100%;
+}
+
+.avisamusicdb-trailer-item .trailer-image-wrap,
+.avisamusicdb-trailer-item .img-wrap {
+  position: relative;
+}
+
+.avisamusicdb-trailer-item .play-icon {
+  font-size: 50px;
+  top: 50%;
+  color: #fff;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.avisamusicdb-trailer-item .play-icon:hover {
+  cursor: pointer;
+  -webkit-transform: translate(-50%, -50%) scale(1.2);
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.avisamusicdb-trailer-item .thumb-img {
+  display: none;
+}
+
+.avisamusicdb-trailer-item .sppb-modal-rating {
+  display: none !important;
+}
+
+.avisamusicdb-trailer-item .music-title {
+  margin: 0 0 5px;
+}
+
+.avisamusicdb-trailer-item .count-rating {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+}
+
+.avisamusicdb-trailer-item .count-rating:before {
+  content: '\e913';
+  font-family: 'avisamusicdb';
+  color: #ffc000;
+  position: absolute;
+  left: 0;
+  font-size: 60px;
+}
+
+.avisamusicdb-trailer-item .count-rating span {
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  line-height: 72px;
+}
+
+.avisa-avisamusicdb-trailers-info {
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.avisa-avisamusicdb-trailers-info .avisamusicdb-trailer-info-block {
+  display: inline-block;
+  float: left;
+  width: 80%;
+  text-align: left;
+}
+
+.avisa-avisamusicdb-trailers-info .avisamusicdb-trailer-info-block a {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.avisa-avisamusicdb-trailers-info .avisamusicdb-trailer-info-block .avisamusicdb-genry a {
+  color: #fff;
+  margin: 0;
+}
+
+.avisa-avisamusicdb-trailers-info .avisamusicdb-trailer-info-block .avisamusicdb-genry a:hover {
+  color: rgba(255, 255, 255, .6);
+}
+
+.avisa-avisamusicdb-trailers-info .avisamusicdb-trailer-info-block .sppb-modal-title,
+.avisa-avisamusicdb-trailers-info .avisamusicdb-trailer-info-block .avisamusicdb-genry {
+  margin: 0;
+}
+
+.avisa-avisamusicdb-trailers-info .thumb-img {
+  width: 70px;
+  float: left;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.avisa-avisamusicdb-trailers-info .sppb-modal-rating {
+  display: inline-block;
+  float: right;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  margin: 0;
+}
+
+.avisa-avisamusicdb-trailers-info .sppb-modal-rating:before {
+  content: '\e913';
+  font-family: 'avisa-musicw';
+  color: #ffc000;
+  position: absolute;
+  left: 5px;
+  font-size: 50px;
+  top: -3px;
+}
+
+.avisamusicdb-trailer-item .subleading .avisamusicdb-trailer-info-block h3,
+.avisamusicdb-trailer-item .subleading .avisamusicdb-trailer-info-block p {
+  color: #000;
+}

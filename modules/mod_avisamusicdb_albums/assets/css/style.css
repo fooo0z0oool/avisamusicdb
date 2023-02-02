@@ -1,0 +1,38 @@
+/**
+* @package     Joomla.Site
+* @subpackage  mod_avisamusicdb_celebraties
+*
+* @copyright   Copyright (C) 2020 - 2023 AvisaPro. All rights reserved.
+* @license     GNU General Public License version 2 or later.
+*/
+
+.mod-avisamusicdb-albums .avisamusicdb-album {
+  margin-bottom: 20px;
+}
+
+.mod-avisamusicdb-albums .avisamusicdb-album:last-child {
+  margin-bottom: 0;
+}
+
+.mod-avisamusicdb-albums .avisamusicdb-album-thumb {
+  margin-right: 20px;
+  width: 64px;
+  height: 64px;
+  background-size: cover;
+}
+
+.mod-avisamusicdb-albums .musicdb-album-info {
+  margin-top: 5px;
+}
+
+.mod-avisamusicdb-albums .musicdb-album-info .musicdb-album-name a {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.mod-avisamusicdb-albums .musicdb-album-info .musicdb-album-name small {
+  display: block;
+  font-size: 14px;
+  color: #888;
+  font-weight: 400;
+}

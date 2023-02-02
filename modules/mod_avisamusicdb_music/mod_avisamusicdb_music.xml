@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.4" client="site" method="upgrade">
+	<name>Avisa  Music Database Musics</name>
+	<author>AvisaPro.com</author>
+	<creationDate>Jan 2016</creationDate>
+	<copyright>Copyright (C) 2020 - 2023 AvisaPro. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later;</license>
+	<authorEmail>support@avisapro.ir</authorEmail>
+	<authorUrl>www.avisapro.ir</authorUrl>
+	<version>1.0.1</version>
+	<description>Module to display list of musics from Avisa  Music Database component.</description>
+	<files>
+		<filename module="mod_avisamusicdb_music">mod_avisamusicdb_music.php</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+		<folder>assets</folder>
+	</files>
+
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_avisamusicdb_music.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+				<field name="order_by"
+					type="list"
+					label="MOD_AVISAMUSIDB_FIELD_ORDERBY"
+					description="MOD_AVISAMUSIDB_FIELD_ORDERBY_DESC">
+						<option value="desc">MOD_AVISAMUSICDB_MUSIC_FIELD_DESCENDING</option>	
+						<option value="asc">MOD_AVISAMUSICDB_MUSIC_FIELD_ASCENDING</option>	
+						<option value="featured">MOD_AVISAMUSICDB_MUSIC_FIELD_FEATURED</option>	
+				</field>
+
+				<field name="slidelimit"
+					type="number"
+					default="5"
+					label="MOD_AVISAMUSICDB_FIELD_SLIDE_LIMIT"
+					description="MOD_AVISAMUSICDB_FIELD_SLIDE_LIMIT_DESC"
+				/>
+
+				<field name="limit"
+					type="number"
+					default="10"
+					label="MOD_AVISAMUSICDB_FIELD_LIMIT"
+					description="MOD_AVISAMUSICDB_FIELD_LIMIT_DESC"
+				/>
+
+				<field name="autoplay" type="radio" default="1" class="btn-group" label="MOD_AVISAMUSICDB_FIELD_AUTOPLAY">
+				    <option value="1">JYES</option>
+				    <option value="0">JNO</option>
+				</field>
+
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
