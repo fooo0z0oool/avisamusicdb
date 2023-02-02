@@ -1,0 +1,201 @@
+/**
+ * @package    	Joomla.Site
+ * @subpackage 	com_avisamusicdb
+ * @author 		AvisaPro support@avisapro.ir
+ * @copyright 	Copyright (c) 2020 - 2023 AvisaPro <https://www.avisapro.ir>. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+@font-face {
+    font-family: 'avisamusicdb';
+    src: url('../fonts/avisamusicdb.eot?4gk1te');
+    src: url('../fonts/avisamusicdb.eot?4gk1te#iefix') format('embedded-opentype'),
+        url('../fonts/avisamusicdb.ttf?4gk1te') format('truetype'),
+        url('../fonts/avisamusicdb.woff?4gk1te') format('woff'),
+        url('../fonts/avisamusicdb.svg?4gk1te#avisamusicdb') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="avisamusicdb-icon-"],
+[class*=" avisamusicdb-icon-"] {
+    font-family: 'avisamusicdb' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.avisamusicdb-icon-angle-left:before {
+    content: "\e900";
+}
+
+.avisamusicdb-icon-angle-right:before {
+    content: "\e901";
+}
+
+.avisamusicdb-icon-up:before {
+    content: "\e902";
+}
+
+.avisamusicdb-icon-down:before {
+    content: "\e903";
+}
+
+.avisamusicdb-icon-angle-double-left:before {
+    content: "\e904";
+}
+
+.avisamusicdb-icon-angle-double-right:before {
+    content: "\e905";
+}
+
+.avisamusicdb-icon-celebrities:before {
+    content: "\e906";
+}
+
+.avisamusicdb-icon-clock:before {
+    content: "\e907";
+}
+
+.avisamusicdb-icon-enter:before {
+    content: "\e908";
+}
+
+.avisamusicdb-icon-film:before {
+    content: "\e909";
+}
+
+.avisamusicdb-icon-glass:before {
+    content: "\e90a";
+}
+
+.avisamusicdb-icon-history:before {
+    content: "\e90b";
+}
+
+.avisamusicdb-icon-know:before {
+    content: "\e90c";
+}
+
+.avisamusicdb-icon-like:before {
+    content: "\e90d";
+}
+
+.avisamusicdb-icon-megaphone:before {
+    content: "\e90e";
+}
+
+.avisamusicdb-icon-music:before {
+    content: "\e90f";
+}
+
+.avisamusicdb-icon-news:before {
+    content: "\e910";
+}
+
+.avisamusicdb-icon-newsletter:before {
+    content: "\e911";
+}
+
+.avisamusicdb-icon-play:before {
+    content: "\e912";
+}
+
+.avisamusicdb-icon-rating:before {
+    content: "\e913";
+}
+
+.avisamusicdb-icon-search:before {
+    content: "\e914";
+}
+
+.avisamusicdb-icon-showtime:before {
+    content: "\e915";
+}
+
+.avisamusicdb-icon-story:before {
+    content: "\e916";
+}
+
+.avisamusicdb-icon-ticket:before {
+    content: "\e917";
+}
+
+.avisamusicdb-icon-top-list:before {
+    content: "\e918";
+}
+
+.avisamusicdb-icon-user:before {
+    content: "\e919";
+}
+
+.avisamusicdb-icon-write:before {
+    content: "\e91a";
+}
+
+.avisamusicdb-icon-user-review:before {
+    content: "\e91b";
+}
+
+.avisamusicdb-icon-trailer:before {
+    content: "\e91c";
+}
+
+.avisamusicdb-icon-web:before {
+    content: "\e924";
+}
+
+.avisamusicdb-icon-facebook:before {
+    content: "\e91d";
+}
+
+.avisamusicdb-icon-twitter:before {
+    content: "\e91e";
+}
+
+.avisamusicdb-icon-instagram:before {
+    content: "\e91f";
+}
+
+.avisamusicdb-icon-google-plus:before {
+    content: "\e920";
+}
+
+.avisamusicdb-icon-vimeo:before {
+    content: "\e921";
+}
+
+.avisamusicdb-icon-youtube:before {
+    content: "\e922";
+}
+
+.avisamusicdb-icon-pinterest:before {
+    content: "\e923";
+}
+
+.avisamusicdb-icon-link:before {
+    content: "\e925";
+}
+
+.avisamusicdb-icon-spinner:before {
+    content: "\e926";
+}
+
+.avisamusicdb-icon-star:before {
+    content: "\e927";
+}
+
+.avisamusicdb-icon-star-blank:before {
+    content: "\e928";
+}
+
+.avisamusicdb-icon-close:before {
+    content: "\e929";
+}

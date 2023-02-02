@@ -1,0 +1,1691 @@
+/**
+ * @package    	Joomla.Site
+ * @subpackage 	com_avisamusicdb
+ * @author 		  AvisaPro support@avisapro.ir
+ * @copyright 	Copyright (c) 2020 - 2023 AvisaPro <https://www.avisapro.ir>. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+/* **************   START Common Style   *************** */
+/* ***************************************************** */
+a {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+/* **************   END:: Common Style   *************** */
+/* ***************************************************** */
+
+
+/* **************    START Popup Video   *************** */
+/* ***************************************************** */
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  z-index: 99999;
+  display: none;
+}
+
+.video-container #video-player {
+  width: 100%;
+  height: 100%;
+}
+
+/* **************    END:: Popup Video   *************** */
+/* ***************************************************** */
+
+/* **************    START MUSICS LIST   *************** */
+/* ***************************************************** */
+.musicdb-filters {
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.musicdb-filters ul {
+  list-style: none;
+  padding: 0;
+}
+
+.musicdb-filters ul>li {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 0 5px;
+}
+
+.musicdb-filters ul>li>a {
+  border-bottom: 2px solid transparent;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.musicdb-filters .musicdb-yearindex {
+  position: relative;
+}
+
+.musicdb-filters .musicdb-yearindex:after {
+  content: '\e903';
+  font-family: 'avisamusicdb';
+  position: absolute;
+  right: 0;
+  font-size: 8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.musicdb-filters .musicdb-yearindex label {
+  margin: 0;
+}
+
+.musicdb-filters .musicdb-yearindex select {
+  height: auto;
+  line-height: normal;
+  width: auto;
+  margin: 0;
+  max-width: 120px;
+  min-height: 28px !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  padding: 0 15px 0 0;
+  border-radius: 0;
+  cursor: pointer;
+  font-weight: 400;
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+.avisa-musicdb-view-items .item {
+  margin-bottom: 30px;
+}
+
+.avisa-musicdb-view-items .item .music-name a {
+  color: #000;
+}
+
+.avisa-musicdb-view-items .item .music-name a:hover {
+  color: #f26522;
+}
+
+/* **************    END:: MUSICS LIST   *****************/
+/* ***************************************************** */
+
+
+
+/* **************    START CELEBRITY LIST    *************** */
+/* ***************************************************** */
+.avisa-musicdb-view-celebrities .play-icon {
+  font-size: 55px;
+}
+
+.item .celebritie-poster {
+  overflow: hidden;
+  background-color: #000;
+  position: relative;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.item .celebritie-poster img {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.item:hover .celebritie-poster img {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+  opacity: .5;
+}
+
+.celebritie-details {
+  width: 100%;
+  z-index: 2;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+.celebritie-details .celebritie-title {
+  margin: 10px 0;
+}
+
+.celebritie-details .celebritie-name a {
+  color: #000;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.celebritie-details .celebritie-name a:hover {
+  color: #f26522;
+}
+
+.celebritie-details .tag {
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.celebritie-details .cast {
+  -webkit-transform: translate3d(0, 50px, 0);
+  transform: translate3d(0, 50px, 0);
+  opacity: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -webkit-transition-delay: .15s;
+  transition-delay: .15s;
+}
+
+.celebritie-details .cast span {
+  font-weight: 400;
+}
+
+/* **************    END:: CELEBRITY LIST    *****************/
+/* ***************************************************** */
+
+
+
+/* **************    START VIEW MUSIC & CELEBRITY    *************** */
+/* ***************************************************** */
+
+.view-avisamusicdb-music .music-cover,
+.view-avisamusicdb-celebrity .celebrity-cover {
+  position: relative;
+  padding-top: 250px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+}
+
+.view-avisamusicdb-music .music-cover:before,
+.view-avisamusicdb-celebrity .celebrity-cover:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  background-image: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, #000000 100%);
+  background-image: -moz-linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, #000000 100%);
+  background-image: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, #000000 100%);
+  background-image: -ms-linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, #000000 100%);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, #000000 100%);
+}
+
+.avisamusicdb-trailer-item.leading .avisamusicdb-trailer {
+  overflow: hidden;
+  clear: both;
+}
+
+.view-music .leading.avisamusicdb-trailer-item,
+.view-celebrity .leading.avisamusicdb-trailer-item {
+  width: 100%;
+}
+
+.view-music .leading.avisamusicdb-trailer-item a,
+.view-celebrity .leading.avisamusicdb-trailer-item a,
+.view-music .leading.avisamusicdb-trailer-item .sppb-modal-info-block,
+.view-celebrity .leading.avisamusicdb-trailer-item .sppb-modal-info-block {
+  color: #fff;
+}
+
+.view-music .leading.avisamusicdb-trailer-item:before,
+.view-celebrity .leading.avisamusicdb-trailer-item:before {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.view-music .subleading.avisamusicdb-trailer-item,
+.view-celebrity .subleading.avisamusicdb-trailer-item {
+  margin-bottom: 30px;
+}
+
+.view-music .avisamusicdb-trailer-item .sppb-modal-info-block,
+.view-celebrity .avisamusicdb-trailer-item .sppb-modal-info-block {
+  color: #000;
+}
+
+.view-music .avisamusicdb-trailer-item a,
+.view-celebrity .avisamusicdb-trailer-item a {
+  color: #000;
+}
+
+.view-music .avisamusicdb-trailer-item a:hover,
+.view-celebrity .avisamusicdb-trailer-item a:hover {
+  color: #f26522;
+}
+
+.view-music .avisamusicdb-trailer-item .trailer-image-wrap:before,
+.view-celebrity .avisamusicdb-trailer-item .trailer-image-wrap:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.view-music .avisamusicdb-trailer-item .music-title,
+.view-celebrity .avisamusicdb-trailer-item .music-title,
+.view-music .avisamusicdb-trailer-item .celebrity-title,
+.view-celebrity .avisamusicdb-trailer-item .celebrity-title {
+  font-size: 18px;
+  margin: 0;
+}
+
+.music-details-wrap .header-title,
+.celebrity-details-wrap .header-title {
+  margin: 30px 0 20px 0;
+}
+
+.music-details-wrap .header-title>span,
+.celebrity-details-wrap .header-title>span {
+  font-size: 30px;
+  margin-right: 15px;
+  color: #0072bc;
+}
+
+.music-details-wrap .header-title .title,
+.celebrity-details-wrap .header-title .title {
+  display: inline-block;
+  margin: 0;
+}
+
+.music-details-wrap .music-info-warpper,
+.celebrity-details-wrap .celebrity-info-warpper {
+  float: right;
+}
+
+.celebrity-info-warpper .celebrity-details {
+  line-height: 24px;
+}
+
+.music-details-wrap .music-info-sidebar .item-img,
+.music-details-wrap .music-info-sidebar .img-wrap,
+.celebrity-details-wrap .celebrity-info-sidebar .item-img,
+.celebrity-details-wrap .celebrity-info-sidebar .img-wrap {
+  position: relative;
+}
+
+.music-details-wrap .music-info-sidebar .img-wrap,
+.celebrity-details-wrap .celebrity-info-sidebar .img-wrap {
+  margin-top: -250px;
+}
+
+.music-details-wrap .music-info-sidebar.stick .img-wrap,
+.celebrity-details-wrap .celebrity-info-sidebar.stick .img-wrap {
+  margin-top: 0;
+}
+
+.music-details-wrap .music-info-sidebar .item-img:after,
+.celebrity-details-wrap .celebrity-info-sidebar .item-img:after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, .0) 30%, #000000 100%);
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.music-details-wrap .music-info-sidebar.stick .item-img:after,
+.celebrity-details-wrap .celebrity-info-sidebar.stick .item-img:after {
+  opacity: 1;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 30%, #000000 100%);
+  -webkit-transition: all 500ms;
+}
+
+.music-details-wrap .music-info-sidebar .img-wrap .avisamusicdb-details-wrapper,
+.celebrity-details-wrap .celebrity-info-sidebar .img-wrap .avisamusicdb-details-wrapper {
+  position: relative;
+  -webkit-animation: fadeInDown .5s;
+  -o-animation: fadeInDown .5s;
+  animation: fadeInDown .5s;
+}
+
+.music-details-wrap .music-info-sidebar.stick .img-wrap .avisamusicdb-details-wrapper,
+.celebrity-details-wrap .celebrity-info-sidebar.stick .img-wrap .avisamusicdb-details-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  color: #fff;
+  z-index: 10;
+  -webkit-animation: fadeInUp .5s;
+  -o-animation: fadeInUp .5s;
+  animation: fadeInUp .5s;
+}
+
+.music-details-wrap .music-info-sidebar.stick a,
+.celebrity-details-wrap .celebrity-info-sidebar.stick a {
+  color: #fff;
+}
+
+.music-details-wrap .music-info-sidebar a,
+.celebrity-details-wrap .celebrity-info-sidebar a {
+  color: #696969;
+}
+
+.music-details-wrap .music-info-sidebar a:hover,
+.celebrity-details-wrap .celebrity-info-sidebar a:hover {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  color: #f26522;
+}
+
+.music-details-wrap .music-info-sidebar .title,
+.celebrity-details-wrap .celebrity-info-sidebar .title {
+  margin-top: 35px;
+  margin-bottom: 0;
+}
+
+.music-details-wrap .music-info-sidebar ul,
+.celebrity-details-wrap .celebrity-info-sidebar ul {
+  margin: 15px 0;
+}
+
+.music-details-wrap .music-info-sidebar ul>li,
+.celebrity-details-wrap .celebrity-info-sidebar ul>li {
+  display: block;
+  margin-bottom: 10px;
+  padding-left: 0;
+}
+
+.music-details-wrap .music-info-sidebar ul>li span,
+.celebrity-details-wrap .celebrity-info-sidebar ul>li span {
+  font-weight: 400;
+}
+
+.music-details-wrap .music-info-sidebar a.buy-ticket,
+.celebrity-details-wrap .celebrity-info-sidebar a.buy-ticket {
+  margin-top: 15px;
+  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.music-details-wrap .music-info-sidebar a.buy-ticket:hover,
+.celebrity-details-wrap .celebrity-info-sidebar a.buy-ticket:hover,
+.music-showtime .music-schedule .ticket-urls .btn:hover {
+  color: #fff;
+}
+
+/* video list*/
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  z-index: 99999;
+  display: none;
+}
+
+.video-container #video-player {
+  width: 100%;
+  height: 100%;
+}
+
+.video-container .video-list-button {
+  background: #fff;
+  padding: 10px;
+  position: absolute;
+  top: 50px;
+  right: 90px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.video-container .video-list {
+  background: #fff;
+  padding: 15px;
+  position: absolute;
+  top: 90px;
+  right: 90px;
+  left: 90px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 999;
+  display: none;
+}
+
+.video-list ul>li>a {
+  display: block;
+  position: relative;
+}
+
+.video-list ul>li>a:before {
+  content: '\e912';
+  font-family: 'avisamusicdb';
+  color: #fff;
+  font-size: 35px;
+  top: 50%;
+  left: 50%;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  position: absolute;
+  z-index: 999;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.video-list ul>li>a:after {
+  content: '';
+  background: rgba(242, 101, 34, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.trailers-videos .header-title>span {
+  color: #8dc63f;
+}
+
+.music-details-wrap .trailers-videos .video-list ul,
+.celebrity-details-wrap .trailers-videos .video-list ul {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.music-details-wrap .trailers-videos .video-list ul>li,
+.celebrity-details-wrap .trailers-videos .video-list ul>li {
+  width: 150px;
+  padding: 15px;
+  float: left;
+}
+
+.music-details-wrap .music-details,
+.celebrity-details-wrap .celebrity-details,
+.music-details-wrap .trailers-videos,
+.celebrity-details-wrap .trailers-videos,
+.music-details-wrap .reviews-menu,
+.celebrity-details-wrap .reviews-menu {
+  overflow: hidden;
+}
+
+.music-info {
+  overflow: hidden;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.music-info .avisamusicdb-genre-title {
+  color: #fff;
+}
+
+.music-info .avisamusicdb-genre-title:hover {
+  color: rgba(255, 255, 255, .7);
+}
+
+.celebrity-info {
+  overflow: hidden;
+  color: #fff;
+  padding: 55px 0;
+}
+
+.music-info .music-title,
+.celebrity-info .music-title {
+  margin: 0 0 15px 0;
+}
+
+.music-info .music-title span,
+.celebrity-info .music-title span {
+  font-weight: 400;
+}
+
+.music-info .rating-star,
+.celebrity-info .rating-star {
+  margin-top: 15px;
+}
+
+.music-info .rating-star>span,
+.celebrity-info .rating-star>span {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 15px;
+}
+
+.music-info .rating-star i,
+.celebrity-info .rating-star i {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+.music-info .rating-star .rating-number,
+.celebrity-info .rating-star .rating-number {
+  color: #fff;
+  font-weight: 300;
+}
+
+.music-social-icon {
+  margin-top: 15px;
+}
+
+.music-social-icon ul {
+  margin: 0;
+  padding: 0;
+}
+
+.music-social-icon ul>li {
+  display: inline-block !important;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.music-info-sidebar .music-social-icon>span,
+.celebrity-info-sidebar .music-social-icon>span {
+  color: #000;
+}
+
+.music-info-sidebar.stick .music-social-icon>span,
+.celebrity-info-sidebar.stick .music-social-icon>span {
+  color: #fff
+}
+
+.music-social-icon>span {
+  font-weight: 600;
+  margin-right: 15px;
+  float: left;
+  font-size: 16px;
+}
+
+.facebook {
+  color: #0e76bc !important;
+}
+
+.twitter {
+  color: #25aae1 !important;
+}
+
+.googleplus {
+  color: #e33d33 !important;
+}
+
+.youtube {
+  color: #bf1e2e !important;
+}
+
+.vimeo {
+  color: #25aae1 !important;
+}
+
+.music-info .count-rating,
+.celebrity-info .count-rating {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  line-height: 140px;
+  text-align: center;
+}
+
+.music-info .count-rating:before,
+.celebrity-info .count-rating:before {
+  content: '\e913';
+  font-family: 'avisamusicdb';
+  color: #ffc000;
+  position: absolute;
+  left: 50%;
+  margin-left: -70px;
+  font-size: 130px;
+  width: 140px;
+  height: 140px;
+  line-height: 140px;
+}
+
+.music-info .count-rating span,
+.celebrity-info .count-rating span {
+  display: block;
+  font-size: 40px;
+  line-height: 156px;
+}
+
+.user-reviews .list-inline {
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+
+.user-reviews .reviews-menu {
+  margin: 60px 0 25px 0;
+}
+
+.user-reviews .reviews-menu ul>li {
+  color: #8e8e8e;
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+.user-reviews .reviews-menu ul>li:after {
+  content: "|";
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.user-reviews .reviews-menu ul>li:last-child {
+  margin-right: 0;
+}
+
+.user-reviews .reviews-menu ul>li:last-child:after {
+  display: none;
+}
+
+.user-reviews .reviews-menu ul>li a {
+  color: #8e8e8e;
+}
+
+.user-reviews .reviews-menu ul>li i {
+  margin-right: 5px;
+}
+
+.user-reviews .header-title {
+  margin: 0;
+}
+
+.user-reviews .header-title>span {
+  color: #ffc000;
+}
+
+.user-reviews .reviewers-form textarea {
+  width: 100%;
+  height: 190px;
+  border-color: #e9edf0;
+  border-radius: 0;
+  margin-bottom: 30px;
+}
+
+.user-reviews .reviewers-form .review-box {
+  padding: 30px;
+}
+
+.user-reviews .reviewers-form .reviewers-name span {
+  font-weight: 600;
+}
+
+.user-reviews .reviewers-form .reviewers-review {
+  margin-top: 30px;
+}
+
+.user-reviews .review-box .star {
+  font-size: 16px;
+}
+
+.user-reviews .reviewers-review {
+  margin-top: 15px;
+}
+
+.user-reviews .reviewers-review .reviewers-name {
+  font-weight: 600;
+  margin-right: 15px;
+}
+
+.user-reviews .reviewers-review .reviewers-name a {
+  color: #000;
+}
+
+.user-reviews .reviewers-review .reviewers-name a:hover {
+  color: #f26522;
+}
+
+.user-reviews .reviewers-review .date-time {
+  font-weight: 600;
+  color: #777;
+}
+
+.user-reviews .music-title {
+  margin: 0 0 10px;
+}
+
+.user-reviews .reviewers-review .date-time i {
+  margin-right: 5px;
+}
+
+.user-reviews .reviewers-review .review-message {
+  margin-top: 10px;
+}
+
+.user-reviews .review-wrap {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.user-reviews .profile-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 68px;
+}
+
+.user-reviews .review-wrap:last-child {
+  margin-bottom: 0;
+}
+
+.user-reviews .review-box {
+  background: #edf6fc;
+  padding: 30px;
+  margin-left: 98px;
+  position: relative;
+}
+
+.user-reviews .review-box:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #edf6fc transparent transparent;
+}
+
+#my-reviews .review-box {
+  margin-left: 0;
+}
+
+#my-reviews .review-box:before {
+  display: none;
+}
+
+.music-showtime {
+  font-weight: 400;
+}
+
+.music-showtime .header-title {
+  margin: 60px 0 0 0;
+}
+
+.music-showtime .header-title>span {
+  color: #ec008c;
+}
+
+.music-showtime .category-list {
+  overflow: hidden;
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 10px;
+}
+
+.music-showtime .category-list a {
+  color: #000;
+}
+
+.music-showtime .category-list a:hover {
+  color: #f26522;
+}
+
+.music-showtime .category-list span {
+  font-weight: 600;
+}
+
+.music-showtime .category-list .select-menu {
+  position: relative;
+  float: left;
+  margin-right: 30px;
+}
+
+.music-showtime .category-list .select-menu select {
+  max-width: 150px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  padding: 3px 10px;
+  border-radius: 0;
+  font-weight: 400;
+  display: inline-block;
+  font-size: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  color: #727272;
+}
+
+.music-showtime .category-list .select-menu select:hover {
+  cursor: pointer;
+}
+
+.music-showtime .category-list .see-all {
+  line-height: 35px;
+}
+
+.music-showtime .category-list .select-menu::after {
+  content: '\e903';
+  font-family: 'avisamusicdb';
+  font-size: 14px;
+  position: absolute;
+  right: 5px;
+  top: 7px;
+  pointer-events: none;
+}
+
+.music-showtime .music-schedule {
+  overflow: hidden;
+  padding: 30px 0;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.music-showtime .music-schedule .location-name,
+.music-showtime .show-time {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.music-showtime .show-time {
+  margin-top: 20px;
+}
+
+.music-showtime .music-schedule .address {
+  font-size: 14px;
+  color: #828282;
+  margin-bottom: 0;
+}
+
+.music-showtime .music-schedule .address i {
+  color: #f26522;
+  margin-right: 5px;
+}
+
+.music-showtime .music-schedule .times>ul {
+  padding: 10px 0;
+  margin: 0;
+}
+
+.music-showtime .music-schedule .times>ul li {
+  margin-right: 10px;
+}
+
+.music-showtime .music-schedule .times>ul li:last-child {
+  margin: 0;
+}
+
+.music-showtime .music-schedule .times>ul li:last-child:after {
+  display: none;
+}
+
+.music-showtime .music-schedule .times>ul li:after {
+  content: "|";
+  margin-left: 15px;
+  font-size: 14px;
+  color: #e3e3e3;
+}
+
+.music-showtime .music-schedule .ticket-urls .btn {
+  margin: 12px 0;
+}
+
+.recommend-musics .header-title {
+  margin: 60px 0 25px 0;
+}
+
+.recommend-musics .header-title>span {
+  color: #ff5c72;
+}
+
+.recommend-musics .music-details a {
+  color: #000;
+}
+
+.recommend-musics .music-details a:hover {
+  color: #f26522;
+}
+
+/* **************    END:: VIEW MUSIC   *****************/
+/* ***************************************************** */
+
+
+
+/* **************    RATING & REVIEW   *****************/
+/* ***************************************************** */
+body.reviewers-form-popup-open:after {
+  content: " ";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+#reviewers-form-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 940px;
+  max-width: 95%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 50px;
+  z-index: 99999;
+  box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+  overflow-y: auto;
+}
+
+.reviewers-form .fa-spinner {
+  display: none;
+}
+
+body.reviewers-form-popup-open .fa-times {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #999;
+  font-size: 24px;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+}
+
+.reviewers-form .fa-times:hover {
+  color: #666;
+}
+
+.reviewers-form.avisa-loader .fa-spinner {
+  display: block;
+}
+
+.avisa-loader {
+  position: relative;
+}
+
+.avisa-loader:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.avisa-loader .fa-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -24px;
+  margin-left: -24px;
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 48px;
+  color: #fff;
+}
+
+.avisa-musicdb-rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  font-size: 19px;
+  display: inline-block;
+}
+
+.avisa-musicdb-rating span.star {
+  font-family: 'avisamusicdb';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  color: #ffc000;
+}
+
+.avisa-musicdb-rating span.star.active:before {
+  content: "\e927";
+}
+
+.avisa-musicdb-rating span.star:before {
+  content: "\e928";
+  padding-right: 5px;
+}
+
+.avisa-musicdb-rating.can-rate span.star:hover:before,
+.avisa-musicdb-rating.can-rate span.star:hover~span.star:before {
+  content: "\e927";
+  cursor: pointer;
+  color: #ffc000;
+}
+
+#avisamusicdb-load-review {
+  margin-left: 68px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  #avisamusicdb-load-review {
+    margin-left: 0;
+  }
+}
+
+#avisamusicdb-load-review:hover,
+#avisamusicdb-load-review:active,
+#avisamusicdb-load-review:focus {
+  text-decoration: none;
+}
+
+/* **************    FILMOGRAPHY   *****************/
+/* ***************************************************** */
+.celebrity-info-warpper .avisamusicdb-filmography {
+  padding-left: 0;
+}
+
+.avisamusicdb-filmography .header-title>span {
+  color: #2e3192;
+}
+
+.avisamusicdb-filmography ul.avisamusicdb-film-list {
+  font-weight: 400;
+  margin: 0;
+}
+
+.avisamusicdb-filmography ul.avisamusicdb-film-list>li {
+  clear: both;
+  overflow: hidden;
+  border-bottom: 1px solid #e3e3e3;
+  padding: 15px 0;
+}
+
+.avisamusicdb-filmography ul.avisamusicdb-film-list>li.main-title {
+  font-weight: 600;
+}
+
+.avisamusicdb-filmography ul.avisamusicdb-film-list>li.main-title p {
+  margin: 0;
+}
+
+.avisamusicdb-filmography ul.avisamusicdb-film-list>li .details {
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flex;
+}
+
+.avisamusicdb-filmography ul.avisamusicdb-film-list>li .details a {
+  color: #000;
+  display: block;
+}
+
+.avisamusicdb-filmography ul.avisamusicdb-film-list>li .details a:hover {
+  color: #f26522;
+}
+
+.avisamusicdb-filmography ul.avisamusicdb-film-list>li .details p {
+  margin-bottom: 0;
+}
+
+.avisamusicdb-filmography ul.avisamusicdb-film-list>li .details .img-warp {
+  width: 55px;
+  height: 65px;
+  margin-right: 20px;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.avisamusicdb-filmography ul.avisamusicdb-film-list>li .details .music-name {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.avisamusicdb-filmography ul.avisamusicdb-film-list>li .details .celebrity-music-genres {
+  color: #828282;
+}
+
+.avisamusicdb-filmography ul.avisamusicdb-film-list>li .details .celebrity-music-genres a {
+  display: inline-block;
+}
+
+.avisamusicdb-filmography ul.avisamusicdb-film-list>li .avisa-musicdb-rating-wrap {
+  margin-top: 25px;
+}
+
+.avisamusicdb-filmography ul.avisamusicdb-film-list>li .avisa-musicdb-rating-wrap .avisamusicdb-rating-summary {
+  margin-left: 10px;
+}
+
+.avisamusicdb-filmography ul.avisamusicdb-film-list>li .avisa-musicdb-rating-wrap .avisa-musicdb-rating span.star:before {
+  padding-right: 3px;
+}
+
+/* **************    END:: FILMOGRAPHY   *****************/
+/* ***************************************************** */
+
+
+/* **************    VIEW TRAILERS   *****************/
+/* ***************************************************** */
+.view-trailers .avisa-musicdb-view-items .item.active:before {
+  bottom: -30px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-width: 15px;
+  left: 50%;
+  margin: -20px 0 0 -15px;
+}
+
+.view-trailers .avisa-musicdb-view-items .item .play-icon {
+  cursor: pointer;
+}
+
+.view-trailers .musicdb-trailer-loader {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #ededed;
+  margin-bottom: 50px;
+}
+
+.view-trailers .musicdb-trailer-loader {
+  font-size: 50px;
+}
+
+.view-trailers #music-trailer-video {
+  position: relative;
+  overflow: hidden;
+}
+
+.view-trailers #music-trailer-video .trailers-videos {
+  overflow: hidden;
+  position: relative;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.view-trailers .music-poster {
+  margin-bottom: 20px;
+}
+
+.view-trailers .avisamusicdb-trailer-item-details .avisamusicdb-music-title {
+  margin-top: 5px;
+}
+
+.view-trailers .avisamusicdb-trailer-item-details .avisamusicdb-music-title a {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+
+}
+
+.view-trailers .avisamusicdb-trailer-item-details .trailer-genres {
+  margin-bottom: 20px;
+}
+
+.view-trailers .avisamusicdb-trailer-item-details .trailer-genres a {
+  color: #000000;
+}
+
+.view-trailers .avisamusicdb-trailer-item-details .trailer-genres a:hover {
+  color: #ccc;
+}
+
+.view-trailers .avisamusicdb-trailer-item-details .btn {
+  margin-top: 10px;
+  padding: 8px 15px;
+  -webkit-box-shadow: 0px 2px 2px -2px rgba(0, 0, 0, .9);
+  box-shadow: 0px 2px 2px -2px rgba(0, 0, 0, .9);
+}
+
+.view-trailers .avisamusicdb-trailer-item-details a.btn:hover {
+  color: #fff !important;
+}
+
+.view-trailers .video-close {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  right: 25px;
+  cursor: pointer;
+}
+
+.view-trailers .video-close::before,
+.view-trailers .video-close::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  height: 1px;
+  background: #888;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.view-trailers .video-close::after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.view-trailers .video-close:hover::before,
+.view-trailers .video-close:hover::after {
+  background: #333;
+}
+
+/* **************    END:: VIEW TRAILERS   *****************/
+/* ***************************************************** */
+
+
+
+/*------------------------------------------------------*/
+/*------------------------------------------------------*/
+/*------------------------------------------------------*/
+
+/*---------- Music Listing Start ----------*/
+
+/*top-shorting*/
+.sorting-by-alphabetical ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sorting-by-alphabetical ul li {
+  display: inline-block;
+}
+
+/*Music Items*/
+.view-musics .play-icon,
+.view-music .play-icon {
+  font-size: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  color: #fff;
+  z-index: 10;
+}
+
+.view-musics .item:hover .play-icon,
+.view-music .item:hover .play-icon {
+  -webkit-transform: translate(-50%, -40%) scale(1);
+  transform: translate(-50%, -40%) scale(1);
+  transition-delay: all .15s;
+  -webkit-transition-delay: all .15s;
+}
+
+.view-musics .item:hover .play-icon:hover,
+.view-music .item:hover .play-icon:hover {
+  -webkit-transform: translate(-50%, -40%) scale(1.2) !important;
+  transform: translate(-50%, -40%) scale(1.2) !important;
+}
+
+.view-musics .item:hover .music-poster img,
+.view-music .item:hover .music-poster img {
+  scale: 1.3;
+  opacity: .5;
+}
+
+.view-musics .item .music-poster,
+.view-music .item .music-poster {
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+  transition: all .3s;
+  margin-bottom: 15px;
+}
+
+.view-musics .item .music-poster img,
+.view-music .item .music-poster img {
+  transition: all .3s;
+}
+
+.view-musics .music-details .music-name,
+.view-music .music-details .music-name {
+  margin-bottom: 10px;
+}
+
+.view-musics .music-details .tag,
+.view-music .music-details .tag {
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.view-musics .music-details .cast,
+.view-music .music-details .cast {
+  translate3d: 0, 50px, 0;
+  opacity: 0;
+  transition: all .3s;
+  transition-delay: .15s;
+  overflow: hidden;
+  height: 48px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.view-musics .music-details .cast span,
+.view-music .music-details .cast span {
+  font-weight: 400;
+}
+
+/*pagination*/
+ul.pagination-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: solid 1px #08c;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+ul.pagination-list li {
+  display: inline-block;
+  padding: 0 15px;
+}
+
+/*---------- Music Listing Close ----------*/
+
+
+/*---------- Music Details Start ----------*/
+
+/*User Review*/
+.reviews-menu ul.list-inline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+/* Show Times*/
+.times ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.times ul li {
+  display: inline-block;
+}
+
+/*---------- Music Details Close ----------*/
+
+
+/*---------- Celebraty listing Start ----------*/
+
+/*Celebrati Item*/
+.view-celebrities .play-icon {
+  font-size: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  color: #fff;
+  z-index: 10;
+}
+
+.view-celebrities .item:hover .play-icon {
+  -webkit-transform: translate(-50%, -40%) scale(1);
+  transform: translate(-50%, -40%) scale(1);
+  transition-delay: all .15s;
+  -webkit-transition-delay: all .15s;
+}
+
+.view-celebrities .item:hover .play-icon:hover {
+  -webkit-transform: translate(-50%, -40%) scale(1.2) !important;
+  transform: translate(-50%, -40%) scale(1.2) !important;
+}
+
+/*---------- Celebraty listing Close ----------*/
+
+
+
+/*---------- Celebraty Details Start ----------*/
+
+/*=== Latest Trailers and video ===*/
+
+.avisamusicdb-trailer-item.leading {
+  width: 100%;
+  position: relative;
+}
+
+.avisamusicdb-trailer-item.leading .avisamusicdb-trailer {
+  position: relative;
+}
+
+.avisamusicdb-trailer-item.leading .avisamusicdb-trailer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.avisamusicdb-trailer-item.leading .avisa-avisamusicdb-trailers-info {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 20px;
+  z-index: 999;
+  color: #fff;
+}
+
+.avisamusicdb-trailer-item.subleading .avisa-avisamusicdb-trailers-info .avisamusicdb-trailer-info-block {
+  padding-top: 15px;
+}
+
+.avisamusicdb-trailer-item.leading .avisa-avisamusicdb-trailers-info .avisamusicdb-trailer-info-block a {
+  display: inline-block;
+  margin-top: 10px;
+  transition: 400ms;
+}
+
+.avisamusicdb-trailer-item.leading .avisa-avisamusicdb-trailers-info {
+  z-index: 10;
+}
+
+.avisamusicdb-trailer-item.leading .avisa-avisamusicdb-trailers-info .thumb-img {
+  width: 70px;
+  float: left;
+  margin-right: 15px;
+}
+
+.avisamusicdb-trailer-item.leading .play-icon {
+  font-size: 130px;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(1);
+  top: 50%;
+  left: 50%;
+  transition: all .3s;
+  z-index: 10;
+}
+
+.avisamusicdb-trailer-item.subleading .play-icon {
+  font-size: 50px;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(1);
+  top: 50%;
+  left: 50%;
+  transition: all .3s;
+  z-index: 10;
+  color: #fff;
+}
+
+.avisamusicdb-trailer-item.leading .play-icon:hover,
+.avisamusicdb-trailer-item.subleading .play-icon:hover {
+  cursor: pointer;
+  -webkit-transform: translate(-50%, -50%) scale(1.2);
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.avisamusicdb-trailer-item.leading .thumb-img {
+  display: block;
+}
+
+.avisamusicdb-trailer-item.leading .sppb-modal-rating {
+  display: block !important;
+}
+
+.avisamusicdb-trailer-item.leading h4.music-title {
+  margin: 0 0 5px;
+}
+
+.avisamusicdb-trailer-item.leading p.avisamusicdb-genry {
+  margin-bottom: 0;
+}
+
+.avisamusicdb-trailer-item.subleading {
+  margin-top: 30px;
+  margin-bottom: 0 !important;
+}
+
+.avisamusicdb-trailer-item.subleading .trailer-image-wrap {
+  position: relative;
+}
+
+.avisamusicdb-trailer-item.subleading .trailer-image-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.avisamusicdb-trailer-item.subleading .count-rating {
+  display: none;
+}
+
+/*---------- Celebraty Details Close ----------*/
+
+/*---------- Video Close Button Start ----------*/
+
+.video-container .video-close {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 999;
+  color: #fff;
+  font-size: 30px;
+  transition: 400ms;
+}
+
+.video-container .video-close:hover {
+  color: #08c;
+}
+
+/*---------- Video Close Button Start ----------*/
+
+
+/*---------- Searchresults Page Start ----------*/
+
+.view-searchresults .item .music-poster {
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.view-searchresults .item .music-poster img {
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.view-searchresults .item .music-poster .play-icon {
+  font-size: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  color: #fff;
+  z-index: 10;
+}
+
+.view-searchresults .item:hover .music-poster .play-icon {
+  -webkit-transform: translate(-50%, -40%) scale(1);
+  transform: translate(-50%, -40%) scale(1);
+}
+
+/*---------- Searchresults Page End ----------*/
+
+
+/*---------- Trailers Details Page Start ----------*/
+.view-trailers .item .music-poster {
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.view-trailers .item .music-poster img {
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.view-trailers .item .music-poster .play-icon {
+  font-size: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  color: #fff;
+  z-index: 10;
+}
+
+.view-trailers .item:hover .music-poster .play-icon {
+  -webkit-transform: translate(-50%, -40%) scale(1);
+  transform: translate(-50%, -40%) scale(1);
+}

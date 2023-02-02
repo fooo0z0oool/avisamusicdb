@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<fields name="request" addfieldpath="/components/com_avisamusicdb/fields">
+    	<fieldset name="request" addfieldpath="/components/com_spsoccer/fields">
+    		<field name="genreid" type="genres" label="COM_AVISAMUSICDB_SELECT_GENRE" description="COM_AVISAMUSICDB_SELECT_GENRE_DESC"/>
+    	</fieldset>
+    </fields>
+</metadata>

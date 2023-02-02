@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+
+	<fields name="params" addfieldpath="/components/com_avisamusicdb/fields">
+		<fieldset name="basic" label="COM_AVISAMUSICDB_FIELDSET_MUSICS">
+			<field name="genreid" type="spgenres" default="" label="COM_AVISAMUSICDB_SELECT_GENRE" description="COM_AVISAMUSICDB_SELECT_GENRE_DESC"/>
+			<field name="country" type="avisacountries" default="" label="COM_AVISAMUSICDB_SELECT_COUNTRY" description="COM_AVISAMUSICDB_SELECT_COUNTRY_DESC"/>
+			<field name="order_by" type="list" default="" label="COM_AVISAMUSIDB_FIELD_ORDER_BY" description="COM_AVISAMUSIDB_FIELD_ORDER_BY_DESC">
+				<option value="">COM_AVISAMUSICDB_FIELD_DEFAULT</option>
+				<option value="latest_released">COM_AVISAMUSICDB_FIELD_LATEST_RELEASED</option>
+				<option value="desc">COM_AVISAMUSICDB_FIELD_DESC</option>
+				<option value="coming">COM_AVISAMUSICDB_FIELD_UPCOMING</option>
+				<option value="asc">COM_AVISAMUSICDB_FIELD_ASC</option>
+				<option value="featured">COM_AVISAMUSICDB_FIELD_FEATURED</option>
+			</field>
+		</fieldset>
+	</fields>
+
+</metadata>
