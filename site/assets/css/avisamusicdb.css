@@ -196,6 +196,79 @@ a {
 /* **************    END:: CELEBRITY LIST    *****************/
 /* ***************************************************** */
 
+/* **************    START ALBUMS LIST    *************** */
+/* ***************************************************** */
+.avisa-musicdb-view-albums .play-icon {
+  font-size: 55px;
+}
+
+.item .albume-poster {
+  overflow: hidden;
+  background-color: #000;
+  position: relative;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.item .albume-poster img {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.item:hover .albume-poster img {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+  opacity: .5;
+}
+
+.albume-details {
+  width: 100%;
+  z-index: 2;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+.albume-details .albume-title {
+  margin: 10px 0;
+}
+
+.albume-details .albume-name a {
+  color: #000;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.albume-details .albume-name a:hover {
+  color: #f26522;
+}
+
+.albume-details .tag {
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.albume-details .cast {
+  -webkit-transform: translate3d(0, 50px, 0);
+  transform: translate3d(0, 50px, 0);
+  opacity: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -webkit-transition-delay: .15s;
+  transition-delay: .15s;
+}
+
+.albume-details .cast span {
+  font-weight: 400;
+}
+
+/* **************    END:: ALBUMS LIST    *****************/
+/* ***************************************************** */
 
 
 /* **************    START VIEW MUSIC & CELEBRITY    *************** */
