@@ -31,8 +31,7 @@ class AvisamusicdbModelAlbums extends ListModel
 			$app 			= Factory::getApplication();
 			$params   		= $app->getMenu()->getActive()->getParams(); // get the active item
 			$order_by 		= $params->get('order_by', '');
-			$album_name 	= $params->get('album_name', '');
-			$actor 			= $params->get('actor', '');
+			$actor			= $params->get('actor', '');
 		}
 
 		$inputs = Factory::getApplication()->input;
@@ -80,7 +79,7 @@ class AvisamusicdbModelAlbums extends ListModel
 	 *
 	 * @return mixed
 	 */
-	public static function getCountCelebrities()
+	public static function getCountAlbums()
 	{
 		$db = Factory::getDbo();
 		$query = $db->getQuery(true);
