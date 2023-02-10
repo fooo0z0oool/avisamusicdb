@@ -8,12 +8,6 @@
 				<option value="directors">COM_AVISAMUSICDB_FIELD_ACTORS_DIRECTORS</option>
 			</field>
 
-			<field name="gender" type="list" default="" label="COM_AVISAMUSIDB_FIELD_GENDER" description="COM_AVISAMUSIDB_FIELD_GENDER_DESC">
-				<option value="">COM_AVISAMUSICDB_FIELD_ALL</option>
-				<option value="male">COM_AVISAMUSICDB_FIELD_OPTION_MALE</option>
-				<option value="female">COM_AVISAMUSICDB_FIELD_OPTION_FEMALE</option>
-				<option value="others">COM_AVISAMUSICDB_FIELD_OPTION_OTHERS</option>
-			</field>
 			<field name="order_by" type="list" default="" label="COM_AVISAMUSIDB_FIELD_ORDER_BY" description="COM_AVISAMUSIDB_FIELD_ORDER_BY_DESC">
 				<option value="">COM_AVISAMUSICDB_FIELD_DEFAULT</option>
 				<option value="desc">COM_AVISAMUSICDB_FIELD_DESC</option>
