@@ -72,7 +72,7 @@ class AvisamusicdbViewAlbum extends HtmlView
             $itemMeta['keywords']     = rtrim($this->item->designation, ', ');
         }
 
-        $cleanText = $this->item->biography;
+        $cleanText = $this->item->albumbio;
 
         $itemMeta['metadesc'] = HTMLHelper::_('string.truncate', OutputFilter::cleanText($cleanText), 155);
         $itemMeta['image']    = Uri::base() . $this->item->profile_image;
