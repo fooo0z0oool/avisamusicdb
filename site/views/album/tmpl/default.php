@@ -35,7 +35,6 @@ $doc->addScript(Uri::base(true) . '/components/com_avisamusicdb/assets/js/avisam
                         <div class="album-info">
                             <div class="">
                                 <h1 class="album-title"><?php echo $this->item->title; ?></h1>
-                                <span class="designation"><?php echo $this->item->designation; ?></span>
                                 <div class="music-social-icon">
                                     <span><?php echo Text::_('COM_AVISAMUSICDB_MUSIC_SOCIAL_SHARE'); ?>:</span>
                                     <?php echo LayoutHelper::render('social_share', array('url' => $this->item->url, 'title' => $this->item->title)); ?>
@@ -138,9 +137,9 @@ $doc->addScript(Uri::base(true) . '/components/com_avisamusicdb/assets/js/avisam
                     <div class="album-details">
                         <div class="header-title">
                             <span><i class="avisamusicdb-icon-story"></i></span>
-                            <h3 class="title"><?php echo Text::_('COM_AVISAMUSICDB_ALBUM_BIOGRAPHY'); ?></h3>
+                            <h3 class="title"><?php echo Text::_('COM_AVISAMUSICDB_ALBUM_ALBUMBIO'); ?></h3>
                         </div>
-                        <?php echo $this->item->biography; ?>
+                        <?php echo $this->item->albumbio; ?>
 
                     </div> <!-- //album-details -->
 
