@@ -63,16 +63,15 @@ if ($alphaindex) {
         <div class="avisamusicdb-row">
             <?php foreach ($this->items as $album) { ?>
                 <div class="item avisamusicdb-col-sm-<?php echo round(12 / $this->columns); ?>">
-                    <div class="celebritie-poster">
+                    <div class="albume-poster">
                         <img src="<?php echo Uri::root() . $album->profile_image; ?>" alt="<?php echo $album->title; ?>">
                         <a href="<?php echo $album->url; ?>" class="play-icon"><i class="avisamusicdb-icon-albums"></i></a>
                     </div>
-                    <div class="celebritie-details">
-                        <div class="celebritie-name">
+                    <div class="albume-details">
+                        <div class="albume-name">
                             <a href="<?php echo $album->url; ?>">
-                                <h4 class="celebritie-title"><?php echo $album->title; ?></h4>
+                                <h4 class="albume-title"><?php echo $album->title; ?></h4>
                             </a>
-                            <span><?php echo $album->designation; ?></span>
                         </div>
                     </div>
                 </div>
